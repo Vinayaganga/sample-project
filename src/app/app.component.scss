@@ -1,0 +1,8 @@
+.example-container {
+  width: 95vw;
+  height: 95vh;
+  margin: 10px;
+}
+:host:ng-deep().mat-drwer-content{
+  border-left: 1px solid #CCCCCC;
+}
