@@ -1,12 +1,10 @@
 export interface Project {
     projectName:string;
-    client: Client;
+    description?:string
+    timeLapse?:any;
     timeSpent:number;
-    projectId:number
+    projectId:string
 
 }
-export interface Client {
-    clientName:string;
-    clientId:number;
-}
+
 

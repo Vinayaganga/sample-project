@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <button type="button" class="btn btn-primary" btn-lg btn-block (click)="createProject()">Create Project</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-striped table-inverse table-responsive">
+        <thead class="thead-inverse">
+          <tr>
+            <th>Project Name</th>
+            <th>Description</th>
+            <th>Time Spent</th>
+            <th>Action Buttons</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let project of projects; let index=index">
+              <td >{{project.projectName}}</td>
+              <td >{{project.description}}</td>
+              <td>{{project.timeSpent}}</td>
+              <td >
+                <button type="button" class="btn btn-primary"  (click)="deleteProject(project.projectId)">Remove</button>
+                <button type="button" class="btn btn-primary" *ngIf="!project.timeSpent" (click)="startTimer(index)">Start</button>
+                <button type="button" class="btn btn-primary" *ngIf="project.timeSpent" (click)="stopTimer(index)">Stop</button>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row"></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+</div>

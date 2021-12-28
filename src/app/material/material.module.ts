@@ -91,7 +91,8 @@ import {OverlayModule} from '@angular/cdk/overlay';
     OverlayModule,
     PortalModule,
     ScrollingModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatIconModule
 
   ]
 })

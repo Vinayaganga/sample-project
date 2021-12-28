@@ -1,0 +1,23 @@
+<div class="container-fluid">
+<div class="row">
+  <div class="col-md-12"><h1 class="h5"> Create Project</h1></div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<form [formGroup]="project">
+  <p>
+    <mat-form-field appearance="outline">
+    <input matInput placeholder="Project Name" formControlName="projectName">
+  </mat-form-field>
+  </p>
+    <p><mat-form-field appearance="outline">
+    <input matInput placeholder="Description"  formControlName="description">
+  </mat-form-field></p>
+</form>
+</div>
+<div class="col-md-12">
+  <button type="button" class="btn btn-primary" (click)=createProject(project.value) [disabled]=!isValidForm()>Create Project</button>
+  <button type="button" class="btn btn-primary" (click)=cancel()>Cancel</button>
+</div>
+</div>
+</div>
